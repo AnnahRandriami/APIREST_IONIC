@@ -1,0 +1,25 @@
+<ion-header >
+  <ion-toolbar color="dark"></ion-toolbar>
+  <ion-toolbar color="dark">
+   
+    <ion-searchbar [(ngModel)] ="searchTitle"></ion-searchbar>
+    <ion-buttons slot="end">
+      <ion-button color="light" (click)="searchMovie()">
+        <ion-icon name="search"></ion-icon>
+
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="img_box">
+    <img [src]="movieData.imageUrl" alt="">
+
+  </div>
+  <h1>{{ movieData.title }}</h1>
+  <p class="ion-text-center">{{ movieData.description }}</p>
+
+</ion-content>
+
